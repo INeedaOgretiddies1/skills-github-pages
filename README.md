@@ -1,4 +1,5 @@
-<header>
+mkdir malware-geofence-ai
+cd malware-geofence-ai<header>
 
 <!--
   <<< Author notes: Course header >>>
