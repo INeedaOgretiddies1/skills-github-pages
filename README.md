@@ -1,66 +1,33 @@
-# skills-github-pages
 
-A personal GitHub Pages repository used to showcase experimental projects, architecture notes, and prototypes. This repo contains short-form project descriptions, architecture drafts, and proofs-of-concept spanning AIOps, on‑chain oracle systems, and security tooling.
 
-## Contents / Projects
-- AI-Assisted Fiber Network Fault Triage (AIOps) — see issue #5
-  - A Transformation Layer approach for structuring technician input (notes, OTDR summaries, metadata) into machine-readable signals to support AI reasoning for fiber fault triage.
-  - Goal: reduce MTTR, improve first‑time fix rates, and make AI decision‑support actionable for field and NOC teams.
-  - Link: ./issues/5
-- GO‑Ai — Gas Oracle-Ai (DeFi / oracle architecture) — see issue #2
-  - Next‑gen DeFi framework integrating gas oracles, dynamic liquidity mechanics, and rotating reward systems (cellular model).
-  - Link: ./issues/2
-- Malware Huntsman Protocol (jurisdiction-aware AI legal counsel) — see issue #1
-  - FastAPI-based architecture draft for incident processing, regional legal AI modules, and policy routing.
-  - Link: ./issues/1
+<!--
+  <<< Author notes: Step 2 >>>
+  Start this step by acknowledging the previous step.
+  Define terms and link to docs.github.com.
+  Historic note: previous version checked for empty pull request, changed to the correct theme `minima`.
+-->
 
-## About this repository
-This repo is a lightweight collection of project drafts, architecture notes, and GitHub Pages assets. It is primarily used as a single place to document ideas, collect issue-based project specs, and publish a static site when desired.
+## Step 2: Configure your site
 
-Default branch: main  
-License: MIT
+_You turned on GitHub Pages! :tada:_
 
-## How to use / preview
-Option A — Use GitHub Pages (recommended for quick publishing)
-1. Ensure the repository has an index.md or index.html in the root (or in the `docs/` folder).
-2. In the repository Settings → Pages, set the source to the `main` branch (root or `/docs`).
-3. Wait a few minutes for the site to publish.
+We'll work in a branch, `my-pages`, that I created for you to get this site looking great. :sparkle:
 
-Option B — Local preview with a static server
-1. If your site is plain HTML/Markdown, you can preview with a simple HTTP server:
-   - Python 3: `python -m http.server 8000`
-   - Navigate to http://localhost:8000
-2. If the site uses Jekyll, install Ruby + Bundler and run:
-   - `bundle install`
-   - `bundle exec jekyll serve`
+Jekyll uses a file titled `_config.yml` to store settings for your site, your theme, and reusable content like your site title and GitHub handle. You can check out the `_config.yml` file on the **Code** tab of your repository.
 
-## Contributing
-- Open an issue to propose a new project or feature.
-- Use issues for design discussions and PRs for code / content changes.
-- Suggested issue template:
-  - Title: Short descriptive name
-  - Body: Summary, motivation, desired outcome, any references or design sketches
-- Pull request checklist:
-  - [ ] Describes the change and reasoning
-  - [ ] Adds or updates documentation (README, architecture notes, examples)
-  - [ ] If applicable, includes a simple test or preview instructions
+We need to use a blog-ready theme. For this activity, we will use a theme named "minima".
 
-## Roadmap / Next steps (suggested)
-- Flesh out the AIOps Transformation Layer: schema (JSON Schema / Protobuf), sample parser for technician notes, OTDR summary parser.
-- Add a small demo pipeline (ingest -> transform -> example inference) in Python.
-- Create a GitHub Pages homepage summarizing active projects.
-- Add CI to validate Markdown / JSON schema files.
+### :keyboard: Activity: Configure your site
 
-## Author / Contact
-Owner: William C Dacus — https://github.com/INeedaOgretiddies1  
-(See project issues for detailed drafts and longer-form descriptions.)
+1. Browse to the `_config.yml` file in the `my-pages` branch.
+1. In the upper right corner, open the file editor.
+1. Add a `theme:` set to **minima** so it shows in the `_config.yml` file as below:
+   ```yml
+   theme: minima
+   ```
+1. (optional) You can modify the other configuration variables such as `title:`, `author:`, and `description:` to further customize your site.
+1. Commit your changes.
+1. (optional) Create a pull request to view all the changes you'll make throughout this course. Click the **Pull Requests** tab, click **New pull request**, set `base: main` and `compare:my-pages`.
+1. Wait about 20 seconds then refresh this page (the one you're following instructions from). [GitHub Actions](https://docs.github.com/en/actions) will automatically update to the next step.
 
-## License
-This project is available under the MIT License.
 
----
-
-If you want, I can:
-- Commit this README.md to the repository on the `main` branch (I will ask for confirmation to push).
-- Generate a JSON Schema for the AIOps Transformation Layer outputs and add it to `/schemas/`.
-- Create a simple Python example that parses the sample technician note and OTDR summary and produces a structured JSON output. Which would you like next?
